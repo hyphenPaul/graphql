@@ -1,0 +1,33 @@
+version: '3'
+
+volumes:
+  postgres_data:
+    driver: local
+
+services:
+
+  postgres:
+    image: postgres:12-alpine
+    environment:
+      POSTGRES_PASSWORD: gqlpwd
+      PGDATA: /var/lib/postgresql/data/pgdata
+    ports:
+      - "5434:5432"
+    restart: unless-stopped
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+  graphql:
+    image: 6aebfdf8bf07
+    container_name: graphql
+    restart: unless-stopped
+    environment:
+      DATABASE_URL: ecto://postgres:gqlpwd@postgres/graphql
+      DISPLAY:
+    ports:
+      - "4002:4000"
+    volumes:
+      - ./graphql:/opt/graphql
+      - /tmp/.X11-unix:/tmp/.X11-unix
+    links:
+      - postgres
