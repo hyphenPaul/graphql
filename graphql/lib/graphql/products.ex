@@ -8,6 +8,14 @@ defmodule Graphql.Products do
 
   alias Graphql.Products.Product
 
+  def data() do
+    Dataloader.Ecto.new(Repo, query: &query/2)
+  end
+
+  def query(queryable, _params) do
+    queryable
+  end
+
   @doc """
   Returns the list of products.
 
@@ -36,6 +44,9 @@ defmodule Graphql.Products do
 
   """
   def get_product!(id), do: Repo.get!(Product, id)
+
+
+  def get_product(id), do: Repo.get(Product, id)
 
   @doc """
   Creates a product.

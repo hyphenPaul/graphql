@@ -6,6 +6,8 @@ defmodule Graphql.Products.Product do
     field :description, :string
     field :title, :string
 
+    has_many(:skus, Graphql.Skus.Sku)
+
     timestamps()
   end
 
