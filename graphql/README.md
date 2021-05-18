@@ -78,6 +78,15 @@ curl --location --request POST 'http://localhost:4002/graphql' \
 Official GraphQL Docs - https://graphql.org/
 Absinthe Tutorial - https://www.howtographql.com/graphql-elixir/1-getting-started/
 Absinthe Documentation - https://hexdocs.pm/absinthe/1.4.3/overview.html
+GraphQL Clients - https://github.com/uesteibar/neuron | https://github.com/annkissam/common_graphql_client
+
+----------------------------------------------------------------------------------------------------
+
+## Analysis
+
+- Most planning and development would happen on the schema layer setting up objects, queries, and mutations
+- Need to create a standard for our ecto query structure, the dataloader creates boundaries that aren't all that bad
+- There's not much room to implement this along side business rules - this feels like a data layer and only a data layer from a service perspective
 
 ----------------------------------------------------------------------------------------------------
 
