@@ -75,10 +75,10 @@ curl --location --request POST 'http://localhost:4002/graphql' \
 
 ## Resources
 
-Official GraphQL Docs - https://graphql.org/
-Absinthe Tutorial - https://www.howtographql.com/graphql-elixir/1-getting-started/
-Absinthe Documentation - https://hexdocs.pm/absinthe/1.4.3/overview.html
-GraphQL Clients - https://github.com/uesteibar/neuron | https://github.com/annkissam/common_graphql_client
+- Official GraphQL Docs - https://graphql.org/
+- Absinthe Tutorial - https://www.howtographql.com/graphql-elixir/1-getting-started/
+- Absinthe Documentation - https://hexdocs.pm/absinthe/1.4.3/overview.html
+- GraphQL Clients - https://github.com/uesteibar/neuron | https://github.com/annkissam/common_graphql_client
 
 ----------------------------------------------------------------------------------------------------
 
